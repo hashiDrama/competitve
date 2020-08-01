@@ -4,15 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Adjacency list representation.
+ * Adjacency list representation of undirected graph.
  * 
  */
 public class Graph {
 
-  List<Vertex> vertices;
+  private List<Vertex> vertices;
 
   public Graph() {
     this.vertices = new ArrayList<>();
+  }
+
+  public List<Vertex> getVertices() {
+    return this.vertices;
   }
 
   public void addVertex(Vertex v) {
@@ -23,7 +27,7 @@ public class Graph {
     this.vertices.add(v);
   }
 
-  public void addEdge(Vertex v1, Vertex v2) throws Exception {
+  public void addEdge(Vertex v1, Vertex v2) {
     if (!vertices.contains(v1) || !vertices.contains(v2)) {
       System.out.println(
           "Vertices not present in graph\n" + "Please first add them using addVertex(Vertex v)");
