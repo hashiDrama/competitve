@@ -1,6 +1,17 @@
 package com.test;
 
+import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
+import java.util.Date;
 
 public class SCC{
 
@@ -36,7 +47,7 @@ public class SCC{
       }
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws ParseException {
 //  int[][] matrix = {{0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},
 //          {1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},
 //          {1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0},
@@ -50,15 +61,35 @@ public class SCC{
 //          {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 //  };
   
-  int[][] matrix = {{0,0,1,1,0},
-      {1,0,0,0,0},
-      {0,1,0,0,0},
-      {0,0,0,0,1},
-      {0,0,0,0,0}};
-
-  int maxSubNumber = findCircleNum(matrix);
-  //this output is:  maxSubNumber:5
-  System.out.println("maxSubNumber:"+maxSubNumber);
+//  int[][] matrix = {{0,0,1,1,0},
+//      {1,0,0,0,0},
+//      {0,1,0,0,0},
+//      {0,0,0,0,1},
+//      {0,0,0,0,0}};
+//
+//  int maxSubNumber = findCircleNum(matrix);
+//  //this output is:  maxSubNumber:5
+//  System.out.println("maxSubNumber:"+maxSubNumber);
+    
+    Test test = Test.FAILED;
+    
+    System.out.println(test.getVal());
+    
 }
 
+  enum Test{
+    ACTIVE(null),
+    FAILED(1),
+    SUCCESS(2);
+    
+    private Integer val;
+    
+    private Test(Integer val) {
+      this.val = val;
+    }
+    
+    private Integer getVal() {
+      return val;
+    }
+  }
 }
