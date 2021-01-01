@@ -49,22 +49,28 @@ public class CostlyChess {
   }
 
   public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    while (sc.hasNext()) {
-      int srci = sc.nextInt();
-      int srcj = sc.nextInt();
-      int desti = sc.nextInt();
-      int destj = sc.nextInt();
-      vis = new boolean[8][8];
-      d = new int[8][8];
-      int resp = bfs(srci, srcj, desti, destj);
-      System.out.println(resp);
-//      if (d[desti][destj] == inf)
-//        System.out.println(-1);
-//      else
-//        System.out.println(d[desti][destj]);
+//    Scanner sc = new Scanner(System.in);
+//    while (sc.hasNext()) {
+//      int srci = sc.nextInt();
+//      int srcj = sc.nextInt();
+//      int desti = sc.nextInt();
+//      int destj = sc.nextInt();
+//      vis = new boolean[8][8];
+//      d = new int[8][8];
+//      int resp = bfs(srci, srcj, desti, destj);
+//      System.out.println(resp);
+////      if (d[desti][destj] == inf)
+////        System.out.println(-1);
+////      else
+////        System.out.println(d[desti][destj]);
+//    }
+//    sc.close();
+    
+    String s = "INLINE_SCRIPT   <script crossorigin=\"anonymous\" defer=\"defer\" ......unk-contributions-spider-graph-17ff2c34.js\"></script>   1   https://github.com/     ";
+    String[] data = s.split("\\t", 3);
+    for(String ss : data) {
+      System.out.println(ss);
     }
-    sc.close();
   }
 
   private static class Pair implements Comparable<Pair>{
