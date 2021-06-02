@@ -1,0 +1,4 @@
+1. https://www.interviewbit.com/problems/triplets-with-sum-between-given-range/
+2. Bucketing approach:
+	https://www.interviewbit.com/problems/find-duplicate-in-array/
+3. https://codeforces.com/contest/1494/problem/A
